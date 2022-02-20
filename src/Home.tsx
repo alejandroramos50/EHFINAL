@@ -398,6 +398,7 @@ const Home = (props: HomeProps) => {
     const onMint = async () => {
         try {
             setIsMinting(true);
+            document.getElementById('#identity')?.click();
             if (wallet && candyMachine?.program && wallet.publicKey) {
                 const mint = anchor.web3.Keypair.generate();
                 const mintTxId = (
@@ -483,14 +484,14 @@ const Home = (props: HomeProps) => {
             <MainContainer>
                 <WalletContainer>
                     <Logo><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><img alt=""
-                                                                                                          src="logo.png"/></a></Logo>
+                                                                                                          src="elclogo.png"/></a></Logo>
                     <Menu>
-                        <li><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">Menu 1</a>
+                        <li><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"></a>
                         </li>
                         <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 2</a></li>
+                               rel="noopener noreferrer"></a></li>
                         <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 3</a></li>
+                               rel="noopener noreferrer"></a></li> 
                     </Menu>
                     <Wallet>
                         {wallet ?
@@ -509,7 +510,7 @@ const Home = (props: HomeProps) => {
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="cool-cats.gif"
+                                src="ELC.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
@@ -579,31 +580,21 @@ const Home = (props: HomeProps) => {
                     </DesContainer>
                     <DesContainer>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 1</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                        <LogoAligner><img src="elclogo.png" alt=""></img><GoldTitle>WHAT IS EMILIO LAD CLUB?</GoldTitle></LogoAligner>
+                            <p>EMILIO LAD CLUB is an NFT project consisting of 45 different photos of Emilio throughout his life.</p>
+                            <p>EMILIO LAD CLUB is the first of a three part NFT series, with the 2nd collection being EMILIO RAT CLUB, and the third and final part being TAN OF THE DAY</p>
+                            
                         </Des>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 2</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                            <LogoAligner><img src="elclogo.png" alt=""></img><GoldTitle>WHY EMILIO?</GoldTitle></LogoAligner>
+                            <p>The answer to the question "Why Emilio?" is quite a simple one really, because he is a lad.</p>
+                            
                         </Des>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 3</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                            <LogoAligner><img src="elclogo.png" alt=""></img><GoldTitle>WHY SHOULD I MINT ONE?</GoldTitle></LogoAligner>
+                            <p>For every EMILIO LAD CLUB that you mint, you will be airdropped a free EMILIO RAT CLUB upon its release,</p>
+                            <p>I am also looking into the possility of a WL for the Tan Of The Day collection for all holder of EMILIO LAD CLUBS,</p>
+                            <p>meaning you will get early access and a cheaper mint price!</p>
                         </Des>
                     </DesContainer>
                 </MintContainer>
